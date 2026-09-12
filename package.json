@@ -4,11 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npm --prefix react-portfolio run dev",
-    "build": "npm --prefix react-portfolio run build",
-    "lint": "npm --prefix react-portfolio run lint",
-    "preview": "npm --prefix react-portfolio run preview",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview"
   },
   "keywords": [],
   "author": "",
@@ -20,5 +18,9 @@
     "express": "^5.2.1",
     "nodemailer": "^10.0.9",
     "twilio": "^5.13.1"
+  },
+  "devDependencies": {
+    "typescript": "file:...",
+    "vite": "file:..."
   }
 }
