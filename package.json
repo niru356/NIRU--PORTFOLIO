@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview"
+    "dev": "npm --prefix react-portfolio run dev",
+    "build": "npm --prefix react-portfolio run build",
+    "preview": "npm --prefix react-portfolio run preview"
   },
   "keywords": [],
   "author": "",

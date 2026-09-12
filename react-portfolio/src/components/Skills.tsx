@@ -2,7 +2,9 @@ import React from 'react';
 import RadarChart from './UI/RadarChart';
 import FadeIn from './UI/FadeIn';
 import { motion } from 'framer-motion';
-
+import analyticIcon from '../assets/certificates/analytic.png';
+import efficiencyIcon from '../assets/certificates/efficiency.png';
+import fullstackIcon from '../assets/certificates/fullstack.png';
 export const Skills: React.FC = () => {
   const competencies = [
     {
@@ -17,25 +19,35 @@ export const Skills: React.FC = () => {
     },
     {
       num: '03',
+      title: 'Analytical Problem Solving',
+      desc: 'Applied advanced analytical techniques to solve complex business problems, delivering actionable insights.',
+      icon: analyticIcon,
+    },
+    {
+      num: '04',
       title: 'Data Science / ML',
       desc: 'Applying Python packages like Pandas, NumPy, Matplotlib, and Scikit-learn for Exploratory Data Analysis (EDA).',
     },
     {
-      num: '04',
+      num: '05',
       title: 'Business Intelligence',
       desc: 'Creating visual dashboards and compelling business stories using Power BI and Tableau to deliver actionable KPIs.',
     },
     {
-      num: '05',
-      title: 'Full Stack Development',
+      num: '06',
+      title: 'Full-Stack Data Strengths',
       desc: 'Building responsive, user-centric web applications and embedding interactive analytics dashboards.',
+      icon: fullstackIcon,
     },
     {
-      num: '06',
+      num: '07',
       title: 'Efficiency & Optimization',
       desc: 'Automating manual Excel workflows to cut down report generation times from hours to minutes.',
+      icon: efficiencyIcon,
     },
   ];
+
+
 
   const skillContainerVariants = {
     hidden: { opacity: 0 },
@@ -79,13 +91,18 @@ export const Skills: React.FC = () => {
               className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 rounded-3xl border border-[#D7E2EA]/10 bg-[#D7E2EA]/3 hover:bg-[#D7E2EA]/5 transition-all duration-300 group cursor-pointer"
             >
               <div className="flex items-center gap-6">
-                <span className="text-3xl md:text-4xl font-black font-heading text-[#D7E2EA]/20 group-hover:text-[#D7E2EA]/60 transition-colors">
-                  {comp.num}
-                </span>
-                <h3 className="text-xl md:text-2xl font-bold tracking-tight text-[#D7E2EA]">
-                  {comp.title}
-                </h3>
-              </div>
+                  <span className="text-3xl md:text-4xl font-black font-heading text-[#D7E2EA]/20 group-hover:text-[#D7E2EA]/60 transition-colors">
+                    {comp.num}
+                  </span>
+                  {comp.icon && (
+                    <img src={comp.icon} alt={comp.title + ' icon'} className="w-6 h-6" />
+                  )}
+                  <h3 className="text-xl md:text-2xl font-bold tracking-tight text-[#D7E2EA]">
+                    {comp.title}
+                  </h3>
+                </div>
+
+
               <p className="text-sm md:text-base text-[#D7E2EA]/60 max-w-xl md:text-right group-hover:text-[#D7E2EA]/85 transition-colors">
                 {comp.desc}
               </p>
